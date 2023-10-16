@@ -1,0 +1,40 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "telefono": 102013313,
+      "email": "juan@gmail.com",
+      "empresa": "Microsoft"
+    },
+    {
+      "id": 2,
+      "nombre": "Karen",
+      "telefono": 138198313,
+      "email": "karen@gmail.com",
+      "empresa": "Equifax"
+    },
+    {
+      "nombre": "Josue",
+      "empresa": "Spectra",
+      "email": "josue@gmail.com",
+      "telefono": "31983913",
+      "notas": "Nueva nota",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nombre": "Miguel",
+      "telefono": 319381983,
+      "email": "miguel@gmail.com",
+      "empresa": "Intel"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro",
+      "telefono": 1398198938,
+      "email": "pedro@gmail.com",
+      "empresa": "Amazon"
+    }
+  ]
+}

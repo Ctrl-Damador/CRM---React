@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Components/Layout'
-import NuevoCliente from './Pages/NuevoCliente'
+import NuevoCliente, { action as nuevoClienteAction} from './Pages/NuevoCliente'
 import Index, { loader as ClientesLoader} from './Pages/Index'
+import ErrorPage from './Components/ErrorPage'
+import EditarCliente, { loader as editarClienteLoader, action as editarClienteAction} from './Pages/EditarCliente'
+import { action as eliminarClienteAction} from './Components/Cliente'
 
 const router = createBrowserRouter([
   {
@@ -14,11 +17,27 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
-        loader: ClientesLoader 
+        loader: ClientesLoader,
+        errorElement: <ErrorPage />
       },
       {
         path: '/clientes/nuevo',
-        element: <NuevoCliente />
+        element: <NuevoCliente />,
+        action: nuevoClienteAction,
+        errorElement: <ErrorPage />
+
+      },
+      {
+        path: '/clientes/:clienteId/editar',
+        element: <EditarCliente />,
+        loader: editarClienteLoader,
+        action: editarClienteAction,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: '/clientes/:clienteId/eliminar',
+        action: eliminarClienteAction,
+        errorElement: <ErrorPage />
       }
     ]
   }
